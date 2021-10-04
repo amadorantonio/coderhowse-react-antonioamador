@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "title": "Ranger 27.5",
+        "price": 7199,
+        "description": "Bicicleta de vanguardia, rodada en pleno crecimiento. Pioneros en la fabricación y comercialización de esta rodada en precio de entrada. Un sueño para quien busca una nueva sensación al manejo de la bicicleta de montaña.",
+        "stock": 9,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/RANGER-R27.5-GRIS-VERDE-PERFIL-4.jpg",
+        "category": "Adultos"
+    },
+    {
+        "id": 2,
+        "title": "Cruiser R26",
+        "price": 4999,
+        "description": "Bicicleta para mujer que busca expresar su estilo de la moda, una bicicleta con un concepto actual y retro, excelente para rodar tanto en pavimento, tierra o arena, con un avance cómodo gracias a la relación de su rueda libre, y segura por su frenado contra pedal.",
+        "stock": 5,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300754-CruiserR26-Purpura.jpg",
+        "category": "Urbanas"
+    },
+    {
+        "id": 3,
+        "title": "Skiller DH R20",
+        "price": 3499,
+        "description": "La Bicicleta para el niño que busca algo más que una simple bicicleta, un concepto motocross, de colores agresivos y apegados a las tendencias, una bicicleta que será la diferencia entre una simple rodada, y una aventura extraordinaria.",
+        "stock": 0,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300766-VERDE-NEON-NEGRO-NARANJA-L-01.jpg",
+        "category": "Infantiles"
+    },
+    {
+        "id": 4,
+        "title": "Renzzo R700",
+        "price": 27000,
+        "description": "Para el Usuario que el ejercicio es su estilo de vida, y quiere iniciarse en la ruta, la bicicleta de excelentes prestaciones a un costo accesible, sus colores de tendencia y sus accesorios personalizados generan un Look único, no es sólo un producto para entrenar, también excelente como un medio de transporte.",
+        "stock": 5,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300735-Renzzo700-NegroAmarillo-L-1200x900.jpg",
+        "category": "Adultos"
+    },
+    {
+        "id": 5,
+        "title": "Expert DH R29",
+        "price": 12000,
+        "description": "Excelente para el usuario que quiere ser diferente y de tener un producto único, Bicicleta de montaña con doble suspensión, ideal para paseos en terracería y campo atraviesa, su sistema de cambios en las velocidades facilita su manejo en terrenos complicados, su doble freno da una mayor seguridad al uso de la bicicleta, excelente producto para los que la montaña es algo mas que un simple camino.",
+        "stock": 31,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300747-XpertDHR29-NaranjaNegro-L-1200x900.jpg",
+        "category": "Adultos"
+    },
+    {
+        "id": 6,
+        "title": "ZTX DH 29",
+        "price": 9650,
+        "description": "Bicicleta de vanguardia, rodada en pleno crecimiento. Pioneros en la fabricación y comercialización de esta rodada en precio de entrada. Un sueño para quien busca una nueva sensación al manejo de la bicicleta de montaña.",
+        "stock": 12,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2019/09/300740-ZTXDHR29-NaranjaNegro-L-1200x900.jpg",
+        "category": "Adultos"
+    },
+    {
+        "id": 7,
+        "title": "Ranger Pro R29",
+        "price": 15000,
+        "description": "Excelente para el perfil de Usuario que busca un producto con excelentes prestaciones, la bicicleta que te ayudara a estar en forma y crecer en el ciclismo de montaña, teniendo lo más avanzado de la tendencia de ciclismo, a un costo muy accesible.",
+        "stock": 0,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300723-RangerPRO-R29NaranjaNegro-L-1200x900.jpg",
+        "category": "Adultos"
+    },
+    {
+        "id": 8,
+        "title": "London R700",
+        "price": 6500,
+        "description": "Bicicleta que define la elegancia gracias a sus accesorios, para un perfil de usuarios que buscan un producto que se identifiqué con su estilo de vida, ideal para transportarse en ciudad gracias a su rodada, sus componentes brindan excelente comodidad para trasladarse al trabajo o bien un paseo recreacional.",
+        "stock": 8,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300756-London700-Negro-L-1200x900.jpg",
+        "category": "Urbanas"
+    },
+    {
+        "id": 9,
+        "title": "Broadway R26",
+        "price": 10500,
+        "description": "Nueva Novedosa, una bicicleta que enamorara a cualquiera, por su colorido único y sus detalles concepto POP, un producto que cumple con las necesidades de toda mujer, y que expresa su estilo Juvenil y actual.",
+        "stock": 10,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2019/09/300810-BroadwayR26-Azul-1200x900.jpg",
+        "category": "Urbanas"
+    },
+    {
+        "id": 10,
+        "title": "Folding R20",
+        "price": 8999,
+        "description": "Su sistema plegable y su ligereza, la hace una bicicleta fácil de guardar y transportar, perfecta para cualquier perfil de usuario que busca un producto que se adapte a sus necesidades de transportación, portabilidad, peso y sobre todo, precio, la bicicleta unisex que se adapta a tu forma de ser.",
+        "stock": 0,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2019/09/300758-FoldingR20-Negro-L-1200x900.jpg",
+        "category": "Urbanas"
+    },
+    {
+        "id": 11,
+        "title": "Cuty R12",
+        "price": 2500,
+        "description": "Para las niñas que les atraen los personajes, los colores y los detalles, que les permitirán tener una aventura cada vez que usen su bicicleta.",
+        "stock": 11,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300780-ROSA-NEON-ESMERALDA-L-1200x900.jpg",
+        "category": "Infantiles"
+    },
+    {
+        "id": 12,
+        "title": "Magnum R16",
+        "price": 4200,
+        "description": "Para el niño que una competencia, y aprender los trucos de los grandes es su obsesión, la bicicleta que le permitirá realizar todo esto y más.",
+        "stock": 12,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300764-NEGRO-MATE-L-1200x900.jpg",
+        "category": "Infantiles"
+    },
+    {
+        "id": 13,
+        "title": "Harlem R20",
+        "price": 4500,
+        "description": "Para el perfil de usuario que busca su primer bicicleta de Freestyle a un costo muy accesible, ideal para empezar en esta modalidad, gracias a sus características y componentes, única en el mercado, ideal para realizar los trucos que nunca imaginaste.",
+        "stock": 23,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2017/08/300795-NEGRO-BRILLANTE-L-1200x900.jpg",
+        "category": "Infantiles"
+    },
+    {
+        "id": 14,
+        "title": "SweetGirl R16",
+        "price": 3800,
+        "description": "Para la niña alegre, que busca colores que se identifiquen con ella, colorido en etiquetas que llamen la atención, texturas y personajes agradables y simpáticos, la bicicleta perfecta que se adapta a su forma de ser.",
+        "stock": 25,
+        "pictureUrl": "https://mail.bicicletasmercurio.com.mx/wp-content/uploads/2019/10/300762-ROSA-MAGENTA-ESMERALDA-L-1200x900.jpg",
+        "category": "Infantiles"
+    }
+]
