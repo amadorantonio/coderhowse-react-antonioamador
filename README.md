@@ -27,7 +27,7 @@ Cuenta con:
 
 # Aplicación en funcionamiento
 
-    - Gif: https://github.com/amadorantonio/coderhowse-react-antonioamador/entregaintermedia.gif
+    - Gif: https://github.com/amadorantonio/coderhowse-react-antonioamador/blob/main/entregaintermedia.gif
 
 # Resumen y Notas
 
