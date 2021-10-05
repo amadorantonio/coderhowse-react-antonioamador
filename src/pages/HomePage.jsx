@@ -1,10 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
-import Data from '../assets/data/data.json'
+import data from '../assets/data/data.json'
 import { Spinner } from 'react-bootstrap'
+import Context from '../context/StaticContext'
 
 
 const HomePage = () => {
+
+    const contextData = useContext(Context)
+    console.log('HomePage Context--->', contextData)
 
     const [items, setItems] = useState([])
     const [loader, setLodaer] = useState(true)
@@ -13,7 +17,7 @@ const HomePage = () => {
     useEffect(() => {
         const getItems = new Promise((resolve) => {
             setTimeout(() => {
-                const mockProducts = Data.map((data) =>{
+                const mockProducts = data.map((data) =>{
                     return(data)
                 })
                 resolve(mockProducts)

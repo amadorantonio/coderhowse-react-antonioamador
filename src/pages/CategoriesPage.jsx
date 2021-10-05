@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router'
 import ItemList from '../components/ItemList/ItemList'
-import Data from '../assets/data/data.json'
+import data from '../assets/data/data.json'
 import { Spinner } from 'react-bootstrap'
 
 
@@ -14,7 +14,7 @@ const CategoriesPage = () => {
         setLodaer(true)
         const getItems = new Promise((resolve) => {
             setTimeout(() => {
-                const mockProducts = Data.map((data) =>{
+                const mockProducts = data.map((data) =>{
                     return(data)
                 })
                 resolve(mockProducts)
