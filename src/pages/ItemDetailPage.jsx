@@ -17,7 +17,7 @@ let ItemDetailPage = () => {
                     return(data)
                 })
                 resolve(mockProducts)
-            }, 2000);
+            }, 500);
         })
 
         getItems.then((res)=>{

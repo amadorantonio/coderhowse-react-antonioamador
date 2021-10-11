@@ -1,7 +1,10 @@
-import React ,{useState} from "react";
-import { Col, Container, Row, Button, Modal } from "react-bootstrap";
+import React ,{useState, useContext} from "react";
+import { Col, Container, Row, Button, Modal, Table } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import {NavLink} from 'react-router-dom'
+
+//Context
+import CartContext from '../../context/CartContext'
 
 
 let ItemDetail = ({item}) => {
@@ -9,6 +12,7 @@ let ItemDetail = ({item}) => {
     let [itemCount, setItemCount] = useState(1)
     let [show, setShow] = useState(false);
     let [acquired, setAcquired] = useState(false);
+    const {products, addItem, removeItem, clear} = useContext(CartContext)
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -22,8 +26,13 @@ let ItemDetail = ({item}) => {
     }
 
     const addToCart = () => {
+        addItem({'item': item, 'itemCount': itemCount})
         handleShow()
         setAcquired(true)
+    }
+
+    const removeCart = (id) => {
+        removeItem({'id': id})
     }
 
     return(
@@ -42,31 +51,60 @@ let ItemDetail = ({item}) => {
                         {
                             !acquired && <ItemCount onAdd={onAdd} onLess={onLess} itemCount={itemCount}></ItemCount>
                         }
-                        <Button 
-                            variant="secondary" 
-                            disabled={item.stock === 0} 
-                            onClick={addToCart}
-                            style={acquired ? {display : 'none'} : {}}
-                            >
-                            Agrear a Carrito
-                        </Button>
-                        <NavLink to={"/cart"} className="nav-link">
-                            <Button 
-                                variant="success" 
-                                style={!acquired ? {display : 'none'} : {}}
-                                >
-                                Terminar mi compra
-                            </Button>
-                        </NavLink>
+                        {
+                            !acquired ? (
+                                <Button 
+                                    variant="secondary" 
+                                    disabled={item.stock === 0} 
+                                    onClick={addToCart}
+                                    style={acquired ? {display : 'none'} : {}}
+                                    >
+                                    Agrear a Carrito
+                                </Button>
+                            ) : (
+                                <NavLink to={"/cart"} className="nav-link">
+                                    <Button 
+                                        variant="success" 
+                                        style={!acquired ? {display : 'none'} : {}}
+                                        >
+                                        Terminar mi compra
+                                    </Button>
+                                </NavLink>
+                            )
+                        }
                     </Col>
                 </Row>
             </Container>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Artículos agregados al carrito exitosamente</Modal.Title>
+                    <Modal.Title>Productos en carrito</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Se agregaron {itemCount} artículos.</Modal.Body>
+                <Modal.Body>
+                    <Table>
+                        <thead>
+                            <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {products.map(item =>{
+                        return(
+                            <tr key={item.item.id}>
+                                <td>{item.item.title}</td>
+                                <td>{item.itemCount}</td>
+                                <td><Button variant="light" onClick={() => removeCart(item.item.id)}><i className="bi bi-x-circle" style={{color: 'red'}} key={item.item.id}></i></Button></td>
+                            </tr>
+                        )
+                    })}
+                        </tbody>
+                    </Table>
+                </Modal.Body>
                 <Modal.Footer>
+                <Button variant="danger" onClick={clear}>
+                        Limpiar carrito
+                    </Button>
                     <Button variant="secondary" onClick={handleClose}>
                         Aceptar
                     </Button>

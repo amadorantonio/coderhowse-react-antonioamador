@@ -6,6 +6,11 @@ import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
 
 let NavBar = ({categories}) => {
+
+    // const {products, addItem, removeItem, clear, isInCart} = useContext(CartContext)
+
+    // console.log('productos', products)
+
     return (
         <>
             <Navbar bg="light" expand="lg">

@@ -18,7 +18,7 @@ const CategoriesPage = () => {
                     return(data)
                 })
                 resolve(mockProducts)
-            }, 2000);
+            }, 500);
         })
         getItems.then((res)=>{
             setItems(res.filter(product => product.category === text))

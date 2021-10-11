@@ -1,13 +1,14 @@
-import React, {useContext} from "react";
-import Context from '../../context/StaticContext'
+import React, { useContext } from "react";
+//Context
+import CartContext from '../../context/CartContext'
 
 let CartWidget = () => {
-    const contextData = useContext(Context)
-    console.log('CartWidget Context--->', contextData)
+    const {products} = useContext(CartContext)
+
     return (
         <>
         <i className="bi bi-cart"></i>
-        11
+        {products.length}
         </>
     )
 }
