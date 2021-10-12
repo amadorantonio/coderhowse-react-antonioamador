@@ -6,11 +6,6 @@ import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
 
 let NavBar = ({categories}) => {
-
-    // const {products, addItem, removeItem, clear, isInCart} = useContext(CartContext)
-
-    // console.log('productos', products)
-
     return (
         <>
             <Navbar bg="light" expand="lg">
@@ -31,7 +26,6 @@ let NavBar = ({categories}) => {
                             categories.map((category) => {
                                 return(
                                     <NavLink exact activeClassName="activeClass" className="p-1" to={"/categorias/" + category.text} key={category.id} style={{ textDecoration: 'none', color: 'rgba(0,0,0,.55)' }}>{category.text}</NavLink>
-                                    // <Nav.Link href="#home" key={category.id}>{category.text}</Nav.Link>
                                 )
                             })
                         }
