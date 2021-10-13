@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from 'react-router'
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
-import Data from '../assets/data/data.json'
+// import data from '../assets/data/data.json'
 import { Spinner } from 'react-bootstrap'
+
+import { getItemById } from '../functions/FirebaseFunctions'
+
 
 let ItemDetailPage = () => {
     const {productId} = useParams()
@@ -11,17 +14,20 @@ let ItemDetailPage = () => {
 
 
     useEffect(() => {
-        const getItems = new Promise((resolve) => {
-            setTimeout(() => {
-                const mockProducts = Data.map((data) =>{
-                    return(data)
-                })
-                resolve(mockProducts)
-            }, 500);
-        })
+        // const getItems = new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         const mockProducts = Data.map((data) =>{
+        //             return(data)
+        //         })
+        //         resolve(mockProducts)
+        //     }, 500);
+        // })
 
-        getItems.then((res)=>{
-            setItem(res.find(element => element.id === parseInt(productId)))
+        // getItems.then((res)=>{
+        //     setItem(res.find(element => element.id === parseInt(productId)))
+        // }).finally(() => setLodaer(false))
+        getItemById(productId).then((res) => {
+            setItem(res)
         }).finally(() => setLodaer(false))
     }, [productId])
 

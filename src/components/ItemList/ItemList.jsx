@@ -10,7 +10,7 @@ let ItemList = ({items}) => {
                 items.map((item) => {
                     return(
                         <div className="p-3" key={item.id}>
-                            <Item key={item.id} {...item}></Item>
+                            <Item key={item.id} item={item}></Item>
                         </div>
                     )
                 })

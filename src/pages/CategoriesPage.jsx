@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router'
 import ItemList from '../components/ItemList/ItemList'
-import data from '../assets/data/data.json'
+// import data from '../assets/data/data.json'
 import { Spinner } from 'react-bootstrap'
 
+//firebase
+import { getItemsByCategory } from '../functions/FirebaseFunctions'
 
 const CategoriesPage = () => {
     const {text} = useParams()
@@ -12,16 +14,20 @@ const CategoriesPage = () => {
     
     useEffect(() =>{
         setLodaer(true)
-        const getItems = new Promise((resolve) => {
-            setTimeout(() => {
-                const mockProducts = data.map((data) =>{
-                    return(data)
-                })
-                resolve(mockProducts)
-            }, 500);
-        })
-        getItems.then((res)=>{
-            setItems(res.filter(product => product.category === text))
+        // const getItems = new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         const mockProducts = data.map((data) =>{
+        //             return(data)
+        //         })
+        //         resolve(mockProducts)
+        //     }, 500);
+        // })
+        // getItems.then((res)=>{
+        //     setItems(res.filter(product => product.category === text))
+        // }).finally(() => setLodaer(false))
+
+        getItemsByCategory(text).then((res) => {
+            setItems(res)
         }).finally(() => setLodaer(false))
     }, [text])
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 //Components
@@ -12,13 +12,23 @@ import ItemDetailPage from "./pages/ItemDetailPage";
 
 
 //Data
-import categoriesData from './assets/data/categories.json'
+// import categoriesData from './assets/data/categories.json'
+
+//firebase
+// import db from './firebase'
+// import { collection, getDocs  } from 'firebase/firestore'
+import { getCategories } from './functions/FirebaseFunctions'
 
 export default function AppRouter(){
 
-    const categories = categoriesData.map((data) =>{
-        return(data)
-    })
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+        getCategories().then((res) => {
+            setCategories(res)
+        })
+    }, [])
+
 
     return(
         <BrowserRouter>

@@ -9,7 +9,6 @@ import CartContext from '../../context/CartContext'
 
 let CartWidget = () => {
     const {products, cartShow, handleShow, handleClose, numberOfProducts, totalPrice, clear} = useContext(CartContext)
-    console.log('cartShow: ', cartShow)
 
     return (
         <>
