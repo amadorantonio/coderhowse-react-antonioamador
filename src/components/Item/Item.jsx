@@ -81,7 +81,7 @@ let Item = ({item}) => {
             </Row>
             <Row>
                 <Col>
-                    <NavLink to={"/detalle/" + item.id} className="nav-link"><Button variant="secondary">Ver Detalle</Button></NavLink>
+                    <NavLink to={"/detalle/" + item.idFirebase} className="nav-link"><Button variant="secondary">Ver Detalle</Button></NavLink>
                 </Col>
             </Row>
             </Card.Body>
