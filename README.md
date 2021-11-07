@@ -1,6 +1,6 @@
 # Tony's Bikes
 
-Tony's Bikes es una tienda en línea de bicicletas de diferentes tamaños y varias gamas.
+Tony's Bikes es una tienda en línea de bicicletas de diferentes tamaños y gamas.
 
 Cuenta con:
     - Lista completa de productos en el Home de la aplicación
@@ -10,7 +10,10 @@ Cuenta con:
         - No se puede seleccionar un mayor número del stock disponible
         - No se puede seleccionar un número menor a uno
         - El botón de comprar se deshabilita si no hay stock
-    - Icono de carrito de compras con cantidad de productos agregados (no funcional por el momento)
+    - Icono de carrito de compras con cantidad de productos agregados
+    - Carrito de compras con el resumen de los productos agregados
+    - Formulario de compra con validaciones
+    - Página de consulta de órdenes guardadas
 
 # Instalación
 
@@ -24,10 +27,13 @@ Cuenta con:
     - bootstrap-icons: cómo paquete de íconos
     - react-bootstrap: cómo framework de maquetado
     - react-router-dom: cómo gestor de la navegación
+    - firebase: cómo base de datos
+    - react-moment: para formatear las fechas
+    - react-toastify: para notificaciones internas
 
 # Aplicación en funcionamiento
 
-    - Gif: https://github.com/amadorantonio/coderhowse-react-antonioamador/blob/main/entregaintermedia.gif
+    - Gif: https://github.com/amadorantonio/coderhowse-react-antonioamador/blob/main/entregafinal.gif
 
 # Resumen y Notas
 
@@ -35,7 +41,8 @@ Cuenta con:
     - La tienda de bicicletas es un proyecto real, pero el core es el agendamiento de citas para mantenimiento
     - Se decidió realizar "pages" cómo contenedores principales de los componentes, las rutas sólo mandan a pages, no a componentes
     - La estructura del árbol de componentes esta basada en desafíos anteriores
-    - La aplicación consume dos archivos json, uno para mostrar los menús dinámicamente y otro que contiene los productos
+    - La aplicación consume tres colecciones desde firebase: productos, ordenes y categorías, éstos remplazando el consumo a archivos json locales
+    - Se decidió utilizar una librería de notificaciones internas para representar el éxito o fracaso en las operaciones
 
 # Autor
     - Juan Antonio Amador Barajas

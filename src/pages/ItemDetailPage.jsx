@@ -1,16 +1,16 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from 'react-router'
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
-// import data from '../assets/data/data.json'
 import { Spinner } from 'react-bootstrap'
-
 import { getItemById } from '../functions/FirebaseFunctions'
+import ItemError from "../components/ItemError/ItemError";
 
 
 let ItemDetailPage = () => {
     const {productId} = useParams()
     const [item, setItem] = useState({})
     const [loader, setLodaer] = useState(true)
+    const [itemNotFound, setItemNotFound] = useState(false)
 
 
     useEffect(() => {
@@ -27,6 +27,9 @@ let ItemDetailPage = () => {
         //     setItem(res.find(element => element.id === parseInt(productId)))
         // }).finally(() => setLodaer(false))
         getItemById(productId).then((res) => {
+            if(res.error){
+                setItemNotFound(true)
+            }
             setItem(res)
         }).finally(() => setLodaer(false))
     }, [productId])
@@ -40,7 +43,12 @@ let ItemDetailPage = () => {
                         <Spinner animation="grow" />
                     </div>
                 ) : (
-                    <ItemDetailContainer item={item}></ItemDetailContainer>
+                    itemNotFound ? (
+                        <ItemError productId={productId}></ItemError>
+                    ) : (
+                        <ItemDetailContainer item={item}></ItemDetailContainer>
+                    )
+                    
                 )
             }
         </>

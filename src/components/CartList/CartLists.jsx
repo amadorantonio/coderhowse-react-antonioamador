@@ -13,9 +13,9 @@ let CartList = ({products}) => {
         return(
             <>
             {
-                products.map(product => {
+                products.map((product, index) => {
                     return(
-                        <CartItem product={product} key={product.item.id}/>
+                        <CartItem product={product} index={index} key={product.item.id}/>
                     )
                 })
             }

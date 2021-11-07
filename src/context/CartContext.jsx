@@ -12,6 +12,7 @@ const CartProvider = ({children}) => {
     const[cartShow, setcartShow] = useState(false)
     const[numberOfProducts, setcartNumberOfProducts] = useState(0)
     const[totalPrice, setTotalPrice] = useState(0)
+    const[formShow, setFormShow] = useState(false)
 
     const addItem = (e) => {
         if(isInCart(e.item.id)){
@@ -26,9 +27,9 @@ const CartProvider = ({children}) => {
     }
 
     const removeItem = (e) => {
-        console.log(e)
-        const cartElements = products.filter(element => element.item.id !== e) || []
-        setProducts([...cartElements])
+        let productsTemp = [...products]
+        productsTemp[e].itemCount  > 1 ? productsTemp[e].itemCount = productsTemp[e].itemCount - 1 : productsTemp.splice(e, 1)        
+        setProducts([...productsTemp])
         notifySuccess(`Producto eliminado de la lista de compras`)
     }
 
@@ -43,6 +44,8 @@ const CartProvider = ({children}) => {
 
     const handleShow = () => setcartShow(true);
     const handleClose = () => setcartShow(false);
+    const handleShowForm = () => setFormShow(true);
+    const handleCloseForm = () => setFormShow(false);
 
     useEffect(() =>{
         let count = 0
@@ -67,7 +70,10 @@ const CartProvider = ({children}) => {
         handleShow,
         handleClose,
         numberOfProducts,
-        totalPrice
+        totalPrice,
+        formShow,
+        handleShowForm,
+        handleCloseForm
     }
 
     return(

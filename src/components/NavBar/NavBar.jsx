@@ -29,6 +29,7 @@ let NavBar = ({categories}) => {
                                 )
                             })
                         }
+                        <NavLink exact activeClassName="activeClass" className="p-1" to={"/orders"} style={{ textDecoration: 'none', color: 'rgba(0,0,0,.55)' }}>Pedidos</NavLink>
                         <CartWidget></CartWidget>
                     </Nav>
                     <Nav className="d-flex">

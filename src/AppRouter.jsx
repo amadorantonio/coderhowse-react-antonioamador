@@ -18,6 +18,7 @@ import ItemDetailPage from "./pages/ItemDetailPage";
 // import db from './firebase'
 // import { collection, getDocs  } from 'firebase/firestore'
 import { getCategories } from './functions/FirebaseFunctions'
+import OrdersPage from "./pages/OrdersPage";
 
 export default function AppRouter(){
 
@@ -40,6 +41,7 @@ export default function AppRouter(){
                 <Route exact path="/" component={HomePage}></Route>
                 <Route exact path="/categorias/:text" component={CategoriesPage}></Route>
                 <Route exact path="/detalle/:productId" component={ItemDetailPage}></Route>
+                <Route exact path="/orders" component={OrdersPage}></Route>
                 <Route exact path="*" component={NotFoundPage}></Route>
             </Switch>
         </BrowserRouter>

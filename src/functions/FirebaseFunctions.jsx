@@ -48,8 +48,7 @@ export async function getItemById(id) {
     if (docSnap.exists()) {
         return {idFirebase: docSnap.id, ...docSnap.data()}
     } else {
-    // doc.data() will be undefined in this case
-    console.log("No such document!");
+        return {error: "error"}
     }
 }
 
@@ -57,4 +56,14 @@ export async function pushOrderFirebase(newOrder) {
     const orderFirebase = collection(db, 'orders')
     const order = await addDoc(orderFirebase, newOrder)
     return(order.id)
+}
+
+export async function getOrderById(id) {
+    const docRef = doc(db, "orders", id);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+        return {idFirebase: docSnap.id, ...docSnap.data()}
+    } else {
+        return {error: "error"}
+    }
 }

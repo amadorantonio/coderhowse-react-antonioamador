@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import { Card, Row, Col, Image } from "react-bootstrap"
+import { useLocation } from 'react-router-dom'
+
 
 //Context
 import CartContext from '../../context/CartContext'
 
-let CartItem = ({product}) => {
+let CartItem = ({product, index}) => {
     const {removeItem} = useContext(CartContext)
+    const location = useLocation();
     return(
         <>
         <Row className='p-2'>
@@ -29,11 +32,18 @@ let CartItem = ({product}) => {
                             <Col xs={2}>
                                 Total ${product.itemCount * product.item.price} mxn
                             </Col>
-                            <Col xs={1}>
-                                <div className='btn' onClick={() => removeItem(product.item.id)}>
-                                    <i className="bi bi-trash" style={{color: 'red'}}></i>
-                                </div>
-                            </Col>
+                            {
+                                location.pathname != '/orders' ? (
+                                    <Col xs={1}>
+                                        <div className='btn' onClick={() => removeItem(index)}>
+                                            <i className="bi bi-trash" style={{color: 'red'}}></i>
+                                        </div>
+                                    </Col>
+                                ) : (
+                                    <></>
+                                )
+                            }
+                            
                         </Row>
                     </Card.Body>
                 </Card>
